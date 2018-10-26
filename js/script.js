@@ -14,7 +14,7 @@
              let tachar= document.createElement("button");
              tachar.innerHTML="Tachar";
 
-             element.appendChild(terminar);
+             element.appendChild(this);
              element.appendChild(tachar);
 
              /*element.addEventListener("click", () => {
@@ -26,13 +26,16 @@
 
 
 
-             element.childNodes[1].addEventListener("click", function(){
-                let parent = element.parentNode;
+             element.addEventListener("click", function(){
+                let parent = this.parentNode;
                 let parent2= parent.parentNode;
                 if(parent){
-                    parent2.removeChild(parent);
+                    parent.removeChild(this);
                 }
              });
+
+
+
             // Añadir un boton para marcar de finalizado
             // Elmine de la lista
 
